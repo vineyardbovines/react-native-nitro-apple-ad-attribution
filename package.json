@@ -1,0 +1,75 @@
+{
+  "name": "@vineyardbovines/nitro-apple-ad-attribution",
+  "version": "0.0.1",
+  "description": "Nitro module for Apple AdServices Attribution API",
+  "main": "lib/index",
+  "module": "lib/index",
+  "types": "lib/index.d.ts",
+  "react-native": "src/index",
+  "source": "src/index",
+  "files": [
+    "src",
+    "react-native.config.js",
+    "lib",
+    "nitrogen",
+    "ios/**/*.h",
+    "ios/**/*.m",
+    "ios/**/*.mm",
+    "ios/**/*.cpp",
+    "ios/**/*.swift",
+    "app.plugin.js",
+    "*.podspec",
+    "README.md"
+  ],
+  "scripts": {
+    "spellcheck": "bun x cspell . --gitignore --no-progress --show-suggestions --cache",
+    "typecheck": "turbo typecheck",
+    "format": "bun x @biomejs/biome check --fix --unsafe --no-errors-on-unmatched --files-ignore-unknown=true .",
+    "build": "tsup",
+    "release": "release-it",
+    "commit": "git-cz",
+    "postinstall": "tsc || exit 0;",
+    "codegen": "nitro-codegen --logLevel=\"debug\""
+  },
+  "keywords": [
+    "react-native",
+    "nitro",
+    "apple adservices"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vineyardbovines/react-native-nitro-apple-ad-attribution.git"
+  },
+  "author": "Spence Pope <spencer@begaydocrime.tech> (https://github.com/vineyardbovines)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vineyardbovines/react-native-nitro-apple-ad-attribution/issues"
+  },
+  "homepage": "https://github.com/vineyardbovines/react-native-nitro-apple-ad-attribution#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^19.8.0",
+    "@commitlint/cz-commitlint": "^19.8.0",
+    "@release-it/conventional-changelog": "^10.0.0",
+    "@types/jest": "^29.5.12",
+    "@types/react": "^19.0.6",
+    "commitizen": "^4.3.1",
+    "commitlint": "^19.8.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "lefthook": "^1.11.3",
+    "nitro-codegen": "*",
+    "react": "19.0.0",
+    "react-native": "0.78.0",
+    "react-native-nitro-modules": "*",
+    "release-it": "^18.1.2",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2"
+  },
+  "peerDependencies": {
+    "react": ">=18.3.0",
+    "react-native": ">=0.76.0",
+    "react-native-nitro-modules": "*"
+  }
+}

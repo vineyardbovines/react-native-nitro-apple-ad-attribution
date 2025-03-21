@@ -1,0 +1,20 @@
+{
+  "$schema": "https://nitro.margelo.com/nitro.schema.json",
+  "cxxNamespace": [
+    "nitroappleadattribution"
+  ],
+  "ios": {
+    "iosModuleName": "NitroAppleAdAttribution"
+  },
+  "android": {
+    "androidModuleName": "nitroappleadattribution",
+    "androidNamespace": [
+      "nitroappleadattribution"
+    ],
+    "androidCxxLibName": "nitroappleadattribution"
+  },
+  "autolinking": {},
+  "ignorePaths": [
+    "**/node_modules"
+  ]
+}

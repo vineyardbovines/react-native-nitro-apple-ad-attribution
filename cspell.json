@@ -1,0 +1,60 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "language": "en",
+  "allowCompoundWords": true,
+  "caseSensitive": false,
+  "import": [
+    "@cspell/dict-typescript/cspell-ext.json",
+    "@cspell/dict-sql/cspell-ext.json"
+  ],
+  "dictionaries": [
+    "project-words",
+    "en_US",
+    "softwareTerms",
+    "misc",
+    "lorem-ipsum",
+    "typescript",
+    "node",
+    "bash",
+    "npm",
+    "filetypes"
+  ],
+  "dictionaryDefinitions": [
+    {
+      "name": "project-words",
+      "path": "./assets/cspell-dictionary.txt",
+      "addWords": true
+    }
+  ],
+  "ignorePaths": [
+    "**/.git/**",
+    "**/.turbo/**",
+    "**/node_modules",
+    "**/dist/**",
+    "**/translations/**",
+    "**/dictionaries/**",
+    "**/coverage/**",
+    "**/*.config.ts",
+    "**/*.config.js",
+    "**/ios/**",
+    "**/android/**",
+    "**/migrations/**",
+    "**/certs/**",
+    "**/*.svg",
+    "**/wrangler.toml",
+    ".gitignore",
+    "assets/cspell-dictionary.txt",
+    "bunfig.toml",
+    "__ref",
+    "packages/geo/**",
+    "packages/db/assets/**",
+    "packages/db/scripts/**",
+    "packages/db/**/*.json",
+    "packages/env/**",
+    "**/_old/**",
+    "**/badges.md",
+    "**/mapStyle.ts",
+    "**/data/**"
+  ]
+}
