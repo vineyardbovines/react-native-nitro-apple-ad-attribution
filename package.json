@@ -1,6 +1,6 @@
 {
   "name": "react-native-nitro-apple-ad-attribution",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Nitro module for Apple AdServices Attribution API",
   "main": "lib/index",
   "module": "lib/index",
@@ -22,13 +22,11 @@
     "README.md"
   ],
   "scripts": {
-    "spellcheck": "bun x cspell . --gitignore --no-progress --show-suggestions --cache",
-    "typecheck": "turbo typecheck",
+    "typecheck": "tsc --noEmit --pretty",
     "format": "bun x @biomejs/biome check --fix --unsafe --no-errors-on-unmatched --files-ignore-unknown=true .",
     "build": "tsup",
     "release": "release-it",
     "commit": "git-cz",
-    "postinstall": "tsc || exit 0;",
     "codegen": "nitro-codegen --logLevel=\"debug\""
   },
   "keywords": [

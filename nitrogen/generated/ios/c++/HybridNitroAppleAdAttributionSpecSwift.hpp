@@ -10,21 +10,12 @@
 #include "HybridNitroAppleAdAttributionSpec.hpp"
 
 // Forward declaration of `HybridNitroAppleAdAttributionSpec_cxx` to properly resolve imports.
-namespace NitroAppleAdAttribution
-{
-  class HybridNitroAppleAdAttributionSpec_cxx;
-}
+namespace NitroAppleAdAttribution { class HybridNitroAppleAdAttributionSpec_cxx; }
 
 // Forward declaration of `AdServicesAttributionDataResponse` to properly resolve imports.
-namespace margelo::nitro::nitroappleadattribution
-{
-  struct AdServicesAttributionDataResponse;
-}
+namespace margelo::nitro::nitroappleadattribution { struct AdServicesAttributionDataResponse; }
 // Forward declaration of `AppleAdsAttributionData` to properly resolve imports.
-namespace margelo::nitro::nitroappleadattribution
-{
-  struct AppleAdsAttributionData;
-}
+namespace margelo::nitro::nitroappleadattribution { struct AppleAdsAttributionData; }
 
 #include <NitroModules/Promise.hpp>
 #include "AdServicesAttributionDataResponse.hpp"
@@ -35,8 +26,7 @@ namespace margelo::nitro::nitroappleadattribution
 
 #include "NitroAppleAdAttribution-Swift-Cxx-Umbrella.hpp"
 
-namespace margelo::nitro::nitroappleadattribution
-{
+namespace margelo::nitro::nitroappleadattribution {
 
   /**
    * The C++ part of HybridNitroAppleAdAttributionSpec_cxx.swift.
@@ -48,37 +38,34 @@ namespace margelo::nitro::nitroappleadattribution
    * the future, HybridNitroAppleAdAttributionSpec_cxx can directly inherit from the C++ class HybridNitroAppleAdAttributionSpec
    * to simplify the whole structure and memory management.
    */
-  class HybridNitroAppleAdAttributionSpecSwift : public virtual HybridNitroAppleAdAttributionSpec
-  {
+  class HybridNitroAppleAdAttributionSpecSwift: public virtual HybridNitroAppleAdAttributionSpec {
   public:
     // Constructor from a Swift instance
-    explicit HybridNitroAppleAdAttributionSpecSwift(const NitroAppleAdAttribution::HybridNitroAppleAdAttributionSpec_cxx &swiftPart) : HybridObject(HybridNitroAppleAdAttributionSpec::TAG),
-                                                                                                                                       _swiftPart(swiftPart) {}
+    explicit HybridNitroAppleAdAttributionSpecSwift(const NitroAppleAdAttribution::HybridNitroAppleAdAttributionSpec_cxx& swiftPart):
+      HybridObject(HybridNitroAppleAdAttributionSpec::TAG),
+      _swiftPart(swiftPart) { }
 
   public:
     // Get the Swift part
-    inline NitroAppleAdAttribution::HybridNitroAppleAdAttributionSpec_cxx &getSwiftPart() noexcept
-    {
+    inline NitroAppleAdAttribution::HybridNitroAppleAdAttributionSpec_cxx& getSwiftPart() noexcept {
       return _swiftPart;
     }
 
   public:
     // Get memory pressure
-    inline size_t getExternalMemorySize() noexcept override
-    {
+    inline size_t getExternalMemorySize() noexcept override {
       return _swiftPart.getMemorySize();
     }
 
   public:
     // Properties
+    
 
   public:
     // Methods
-    inline std::shared_ptr<Promise<AdServicesAttributionDataResponse>> getAdServicesAttributionData() override
-    {
+    inline std::shared_ptr<Promise<AdServicesAttributionDataResponse>> getAdServicesAttributionData() override {
       auto __result = _swiftPart.getAdServicesAttributionData();
-      if (__result.hasError()) [[unlikely]]
-      {
+      if (__result.hasError()) [[unlikely]] {
         std::rethrow_exception(__result.error());
       }
       auto __value = std::move(__result.value());

@@ -18,60 +18,57 @@
 #error NitroModules cannot be found! Are you sure you installed NitroModules properly?
 #endif
 
+
+
 #include <string>
 #include <optional>
 
-namespace margelo::nitro::nitroappleadattribution
-{
+namespace margelo::nitro::nitroappleadattribution {
 
   /**
    * A struct which can be represented as a JavaScript object (AppleAdsAttributionData).
    */
-  struct AppleAdsAttributionData
-  {
+  struct AppleAdsAttributionData {
   public:
-    bool attribution SWIFT_PRIVATE;
-    double orgId SWIFT_PRIVATE;
-    double campaignId SWIFT_PRIVATE;
-    std::string conversionType SWIFT_PRIVATE;
-    std::optional<std::string> clickDate SWIFT_PRIVATE;
-    double adGroupId SWIFT_PRIVATE;
-    std::string countryOrRegion SWIFT_PRIVATE;
-    double keywordId SWIFT_PRIVATE;
-    double adId SWIFT_PRIVATE;
+    bool attribution     SWIFT_PRIVATE;
+    double orgId     SWIFT_PRIVATE;
+    double campaignId     SWIFT_PRIVATE;
+    std::string conversionType     SWIFT_PRIVATE;
+    std::optional<std::string> clickDate     SWIFT_PRIVATE;
+    double adGroupId     SWIFT_PRIVATE;
+    std::string countryOrRegion     SWIFT_PRIVATE;
+    double keywordId     SWIFT_PRIVATE;
+    double adId     SWIFT_PRIVATE;
 
   public:
     AppleAdsAttributionData() = default;
-    explicit AppleAdsAttributionData(bool attribution, double orgId, double campaignId, std::string conversionType, std::optional<std::string> clickDate, double adGroupId, std::string countryOrRegion, double keywordId, double adId) : attribution(attribution), orgId(orgId), campaignId(campaignId), conversionType(conversionType), clickDate(clickDate), adGroupId(adGroupId), countryOrRegion(countryOrRegion), keywordId(keywordId), adId(adId) {}
+    explicit AppleAdsAttributionData(bool attribution, double orgId, double campaignId, std::string conversionType, std::optional<std::string> clickDate, double adGroupId, std::string countryOrRegion, double keywordId, double adId): attribution(attribution), orgId(orgId), campaignId(campaignId), conversionType(conversionType), clickDate(clickDate), adGroupId(adGroupId), countryOrRegion(countryOrRegion), keywordId(keywordId), adId(adId) {}
   };
 
 } // namespace margelo::nitro::nitroappleadattribution
 
-namespace margelo::nitro
-{
+namespace margelo::nitro {
 
   using namespace margelo::nitro::nitroappleadattribution;
 
   // C++ AppleAdsAttributionData <> JS AppleAdsAttributionData (object)
   template <>
-  struct JSIConverter<AppleAdsAttributionData> final
-  {
-    static inline AppleAdsAttributionData fromJSI(jsi::Runtime &runtime, const jsi::Value &arg)
-    {
+  struct JSIConverter<AppleAdsAttributionData> final {
+    static inline AppleAdsAttributionData fromJSI(jsi::Runtime& runtime, const jsi::Value& arg) {
       jsi::Object obj = arg.asObject(runtime);
       return AppleAdsAttributionData(
-          JSIConverter<bool>::fromJSI(runtime, obj.getProperty(runtime, "attribution")),
-          JSIConverter<double>::fromJSI(runtime, obj.getProperty(runtime, "orgId")),
-          JSIConverter<double>::fromJSI(runtime, obj.getProperty(runtime, "campaignId")),
-          JSIConverter<std::string>::fromJSI(runtime, obj.getProperty(runtime, "conversionType")),
-          JSIConverter<std::optional<std::string>>::fromJSI(runtime, obj.getProperty(runtime, "clickDate")),
-          JSIConverter<double>::fromJSI(runtime, obj.getProperty(runtime, "adGroupId")),
-          JSIConverter<std::string>::fromJSI(runtime, obj.getProperty(runtime, "countryOrRegion")),
-          JSIConverter<double>::fromJSI(runtime, obj.getProperty(runtime, "keywordId")),
-          JSIConverter<double>::fromJSI(runtime, obj.getProperty(runtime, "adId")));
+        JSIConverter<bool>::fromJSI(runtime, obj.getProperty(runtime, "attribution")),
+        JSIConverter<double>::fromJSI(runtime, obj.getProperty(runtime, "orgId")),
+        JSIConverter<double>::fromJSI(runtime, obj.getProperty(runtime, "campaignId")),
+        JSIConverter<std::string>::fromJSI(runtime, obj.getProperty(runtime, "conversionType")),
+        JSIConverter<std::optional<std::string>>::fromJSI(runtime, obj.getProperty(runtime, "clickDate")),
+        JSIConverter<double>::fromJSI(runtime, obj.getProperty(runtime, "adGroupId")),
+        JSIConverter<std::string>::fromJSI(runtime, obj.getProperty(runtime, "countryOrRegion")),
+        JSIConverter<double>::fromJSI(runtime, obj.getProperty(runtime, "keywordId")),
+        JSIConverter<double>::fromJSI(runtime, obj.getProperty(runtime, "adId"))
+      );
     }
-    static inline jsi::Value toJSI(jsi::Runtime &runtime, const AppleAdsAttributionData &arg)
-    {
+    static inline jsi::Value toJSI(jsi::Runtime& runtime, const AppleAdsAttributionData& arg) {
       jsi::Object obj(runtime);
       obj.setProperty(runtime, "attribution", JSIConverter<bool>::toJSI(runtime, arg.attribution));
       obj.setProperty(runtime, "orgId", JSIConverter<double>::toJSI(runtime, arg.orgId));
@@ -84,31 +81,20 @@ namespace margelo::nitro
       obj.setProperty(runtime, "adId", JSIConverter<double>::toJSI(runtime, arg.adId));
       return obj;
     }
-    static inline bool canConvert(jsi::Runtime &runtime, const jsi::Value &value)
-    {
-      if (!value.isObject())
-      {
+    static inline bool canConvert(jsi::Runtime& runtime, const jsi::Value& value) {
+      if (!value.isObject()) {
         return false;
       }
       jsi::Object obj = value.getObject(runtime);
-      if (!JSIConverter<bool>::canConvert(runtime, obj.getProperty(runtime, "attribution")))
-        return false;
-      if (!JSIConverter<double>::canConvert(runtime, obj.getProperty(runtime, "orgId")))
-        return false;
-      if (!JSIConverter<double>::canConvert(runtime, obj.getProperty(runtime, "campaignId")))
-        return false;
-      if (!JSIConverter<std::string>::canConvert(runtime, obj.getProperty(runtime, "conversionType")))
-        return false;
-      if (!JSIConverter<std::optional<std::string>>::canConvert(runtime, obj.getProperty(runtime, "clickDate")))
-        return false;
-      if (!JSIConverter<double>::canConvert(runtime, obj.getProperty(runtime, "adGroupId")))
-        return false;
-      if (!JSIConverter<std::string>::canConvert(runtime, obj.getProperty(runtime, "countryOrRegion")))
-        return false;
-      if (!JSIConverter<double>::canConvert(runtime, obj.getProperty(runtime, "keywordId")))
-        return false;
-      if (!JSIConverter<double>::canConvert(runtime, obj.getProperty(runtime, "adId")))
-        return false;
+      if (!JSIConverter<bool>::canConvert(runtime, obj.getProperty(runtime, "attribution"))) return false;
+      if (!JSIConverter<double>::canConvert(runtime, obj.getProperty(runtime, "orgId"))) return false;
+      if (!JSIConverter<double>::canConvert(runtime, obj.getProperty(runtime, "campaignId"))) return false;
+      if (!JSIConverter<std::string>::canConvert(runtime, obj.getProperty(runtime, "conversionType"))) return false;
+      if (!JSIConverter<std::optional<std::string>>::canConvert(runtime, obj.getProperty(runtime, "clickDate"))) return false;
+      if (!JSIConverter<double>::canConvert(runtime, obj.getProperty(runtime, "adGroupId"))) return false;
+      if (!JSIConverter<std::string>::canConvert(runtime, obj.getProperty(runtime, "countryOrRegion"))) return false;
+      if (!JSIConverter<double>::canConvert(runtime, obj.getProperty(runtime, "keywordId"))) return false;
+      if (!JSIConverter<double>::canConvert(runtime, obj.getProperty(runtime, "adId"))) return false;
       return true;
     }
   };

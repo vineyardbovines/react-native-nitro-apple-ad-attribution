@@ -32,7 +32,7 @@ public extension AdServicesAttributionDataResponse {
       self.__data = newValue
     }
   }
-
+  
   var error: Error {
     @inline(__always)
     get {

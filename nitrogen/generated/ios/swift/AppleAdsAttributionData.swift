@@ -38,7 +38,7 @@ public extension AppleAdsAttributionData {
       self.__attribution = newValue
     }
   }
-
+  
   var orgId: Double {
     @inline(__always)
     get {
@@ -49,7 +49,7 @@ public extension AppleAdsAttributionData {
       self.__orgId = newValue
     }
   }
-
+  
   var campaignId: Double {
     @inline(__always)
     get {
@@ -60,7 +60,7 @@ public extension AppleAdsAttributionData {
       self.__campaignId = newValue
     }
   }
-
+  
   var conversionType: String {
     @inline(__always)
     get {
@@ -71,7 +71,7 @@ public extension AppleAdsAttributionData {
       self.__conversionType = std.string(newValue)
     }
   }
-
+  
   var clickDate: String? {
     @inline(__always)
     get {
@@ -94,7 +94,7 @@ public extension AppleAdsAttributionData {
       }()
     }
   }
-
+  
   var adGroupId: Double {
     @inline(__always)
     get {
@@ -105,7 +105,7 @@ public extension AppleAdsAttributionData {
       self.__adGroupId = newValue
     }
   }
-
+  
   var countryOrRegion: String {
     @inline(__always)
     get {
@@ -116,7 +116,7 @@ public extension AppleAdsAttributionData {
       self.__countryOrRegion = std.string(newValue)
     }
   }
-
+  
   var keywordId: Double {
     @inline(__always)
     get {
@@ -127,7 +127,7 @@ public extension AppleAdsAttributionData {
       self.__keywordId = newValue
     }
   }
-
+  
   var adId: Double {
     @inline(__always)
     get {

@@ -7,16 +7,15 @@
 
 #include "HybridNitroAppleAdAttributionSpec.hpp"
 
-namespace margelo::nitro::nitroappleadattribution
-{
+namespace margelo::nitro::nitroappleadattribution {
 
-  void HybridNitroAppleAdAttributionSpec::loadHybridMethods()
-  {
+  void HybridNitroAppleAdAttributionSpec::loadHybridMethods() {
     // load base methods/properties
     HybridObject::loadHybridMethods();
     // load custom methods/properties
-    registerHybrids(this, [](Prototype &prototype)
-                    { prototype.registerHybridMethod("getAdServicesAttributionData", &HybridNitroAppleAdAttributionSpec::getAdServicesAttributionData); });
+    registerHybrids(this, [](Prototype& prototype) {
+      prototype.registerHybridMethod("getAdServicesAttributionData", &HybridNitroAppleAdAttributionSpec::getAdServicesAttributionData);
+    });
   }
 
 } // namespace margelo::nitro::nitroappleadattribution

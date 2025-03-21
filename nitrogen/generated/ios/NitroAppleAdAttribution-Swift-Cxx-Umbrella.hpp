@@ -9,20 +9,11 @@
 
 // Forward declarations of C++ defined types
 // Forward declaration of `AdServicesAttributionDataResponse` to properly resolve imports.
-namespace margelo::nitro::nitroappleadattribution
-{
-  struct AdServicesAttributionDataResponse;
-}
+namespace margelo::nitro::nitroappleadattribution { struct AdServicesAttributionDataResponse; }
 // Forward declaration of `AppleAdsAttributionData` to properly resolve imports.
-namespace margelo::nitro::nitroappleadattribution
-{
-  struct AppleAdsAttributionData;
-}
+namespace margelo::nitro::nitroappleadattribution { struct AppleAdsAttributionData; }
 // Forward declaration of `HybridNitroAppleAdAttributionSpec` to properly resolve imports.
-namespace margelo::nitro::nitroappleadattribution
-{
-  class HybridNitroAppleAdAttributionSpec;
-}
+namespace margelo::nitro::nitroappleadattribution { class HybridNitroAppleAdAttributionSpec; }
 
 // Include C++ defined types
 #include "AdServicesAttributionDataResponse.hpp"
@@ -45,10 +36,7 @@ namespace margelo::nitro::nitroappleadattribution
 
 // Forward declarations of Swift defined types
 // Forward declaration of `HybridNitroAppleAdAttributionSpec_cxx` to properly resolve imports.
-namespace NitroAppleAdAttribution
-{
-  class HybridNitroAppleAdAttributionSpec_cxx;
-}
+namespace NitroAppleAdAttribution { class HybridNitroAppleAdAttributionSpec_cxx; }
 
 // Include Swift defined types
 #if __has_include("NitroAppleAdAttribution-Swift.h")

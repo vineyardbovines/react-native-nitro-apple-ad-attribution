@@ -7,6 +7,5 @@
 
 #include "HybridNitroAppleAdAttributionSpecSwift.hpp"
 
-namespace margelo::nitro::nitroappleadattribution
-{
+namespace margelo::nitro::nitroappleadattribution {
 } // namespace margelo::nitro::nitroappleadattribution

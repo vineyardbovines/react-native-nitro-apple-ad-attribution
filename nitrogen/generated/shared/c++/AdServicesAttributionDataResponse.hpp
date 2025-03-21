@@ -19,67 +19,55 @@
 #endif
 
 // Forward declaration of `AppleAdsAttributionData` to properly resolve imports.
-namespace margelo::nitro::nitroappleadattribution
-{
-  struct AppleAdsAttributionData;
-}
+namespace margelo::nitro::nitroappleadattribution { struct AppleAdsAttributionData; }
 
 #include "AppleAdsAttributionData.hpp"
 #include <exception>
 
-namespace margelo::nitro::nitroappleadattribution
-{
+namespace margelo::nitro::nitroappleadattribution {
 
   /**
    * A struct which can be represented as a JavaScript object (AdServicesAttributionDataResponse).
    */
-  struct AdServicesAttributionDataResponse
-  {
+  struct AdServicesAttributionDataResponse {
   public:
-    AppleAdsAttributionData data SWIFT_PRIVATE;
-    std::exception_ptr error SWIFT_PRIVATE;
+    AppleAdsAttributionData data     SWIFT_PRIVATE;
+    std::exception_ptr error     SWIFT_PRIVATE;
 
   public:
     AdServicesAttributionDataResponse() = default;
-    explicit AdServicesAttributionDataResponse(AppleAdsAttributionData data, std::exception_ptr error) : data(data), error(error) {}
+    explicit AdServicesAttributionDataResponse(AppleAdsAttributionData data, std::exception_ptr error): data(data), error(error) {}
   };
 
 } // namespace margelo::nitro::nitroappleadattribution
 
-namespace margelo::nitro
-{
+namespace margelo::nitro {
 
   using namespace margelo::nitro::nitroappleadattribution;
 
   // C++ AdServicesAttributionDataResponse <> JS AdServicesAttributionDataResponse (object)
   template <>
-  struct JSIConverter<AdServicesAttributionDataResponse> final
-  {
-    static inline AdServicesAttributionDataResponse fromJSI(jsi::Runtime &runtime, const jsi::Value &arg)
-    {
+  struct JSIConverter<AdServicesAttributionDataResponse> final {
+    static inline AdServicesAttributionDataResponse fromJSI(jsi::Runtime& runtime, const jsi::Value& arg) {
       jsi::Object obj = arg.asObject(runtime);
       return AdServicesAttributionDataResponse(
-          JSIConverter<AppleAdsAttributionData>::fromJSI(runtime, obj.getProperty(runtime, "data")),
-          JSIConverter<std::exception_ptr>::fromJSI(runtime, obj.getProperty(runtime, "error")));
+        JSIConverter<AppleAdsAttributionData>::fromJSI(runtime, obj.getProperty(runtime, "data")),
+        JSIConverter<std::exception_ptr>::fromJSI(runtime, obj.getProperty(runtime, "error"))
+      );
     }
-    static inline jsi::Value toJSI(jsi::Runtime &runtime, const AdServicesAttributionDataResponse &arg)
-    {
+    static inline jsi::Value toJSI(jsi::Runtime& runtime, const AdServicesAttributionDataResponse& arg) {
       jsi::Object obj(runtime);
       obj.setProperty(runtime, "data", JSIConverter<AppleAdsAttributionData>::toJSI(runtime, arg.data));
       obj.setProperty(runtime, "error", JSIConverter<std::exception_ptr>::toJSI(runtime, arg.error));
       return obj;
     }
-    static inline bool canConvert(jsi::Runtime &runtime, const jsi::Value &value)
-    {
-      if (!value.isObject())
-      {
+    static inline bool canConvert(jsi::Runtime& runtime, const jsi::Value& value) {
+      if (!value.isObject()) {
         return false;
       }
       jsi::Object obj = value.getObject(runtime);
-      if (!JSIConverter<AppleAdsAttributionData>::canConvert(runtime, obj.getProperty(runtime, "data")))
-        return false;
-      if (!JSIConverter<std::exception_ptr>::canConvert(runtime, obj.getProperty(runtime, "error")))
-        return false;
+      if (!JSIConverter<AppleAdsAttributionData>::canConvert(runtime, obj.getProperty(runtime, "data"))) return false;
+      if (!JSIConverter<std::exception_ptr>::canConvert(runtime, obj.getProperty(runtime, "error"))) return false;
       return true;
     }
   };

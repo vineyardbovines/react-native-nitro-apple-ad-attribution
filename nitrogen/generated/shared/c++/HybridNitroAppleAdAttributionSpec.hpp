@@ -14,16 +14,12 @@
 #endif
 
 // Forward declaration of `AdServicesAttributionDataResponse` to properly resolve imports.
-namespace margelo::nitro::nitroappleadattribution
-{
-  struct AdServicesAttributionDataResponse;
-}
+namespace margelo::nitro::nitroappleadattribution { struct AdServicesAttributionDataResponse; }
 
 #include <NitroModules/Promise.hpp>
 #include "AdServicesAttributionDataResponse.hpp"
 
-namespace margelo::nitro::nitroappleadattribution
-{
+namespace margelo::nitro::nitroappleadattribution {
 
   using namespace margelo::nitro;
 
@@ -40,29 +36,29 @@ namespace margelo::nitro::nitroappleadattribution
    * };
    * ```
    */
-  class HybridNitroAppleAdAttributionSpec : public virtual HybridObject
-  {
-  public:
-    // Constructor
-    explicit HybridNitroAppleAdAttributionSpec() : HybridObject(TAG) {}
+  class HybridNitroAppleAdAttributionSpec: public virtual HybridObject {
+    public:
+      // Constructor
+      explicit HybridNitroAppleAdAttributionSpec(): HybridObject(TAG) { }
 
-    // Destructor
-    ~HybridNitroAppleAdAttributionSpec() override = default;
+      // Destructor
+      ~HybridNitroAppleAdAttributionSpec() override = default;
 
-  public:
-    // Properties
+    public:
+      // Properties
+      
 
-  public:
-    // Methods
-    virtual std::shared_ptr<Promise<AdServicesAttributionDataResponse>> getAdServicesAttributionData() = 0;
+    public:
+      // Methods
+      virtual std::shared_ptr<Promise<AdServicesAttributionDataResponse>> getAdServicesAttributionData() = 0;
 
-  protected:
-    // Hybrid Setup
-    void loadHybridMethods() override;
+    protected:
+      // Hybrid Setup
+      void loadHybridMethods() override;
 
-  protected:
-    // Tag for logging
-    static constexpr auto TAG = "NitroAppleAdAttribution";
+    protected:
+      // Tag for logging
+      static constexpr auto TAG = "NitroAppleAdAttribution";
   };
 
 } // namespace margelo::nitro::nitroappleadattribution

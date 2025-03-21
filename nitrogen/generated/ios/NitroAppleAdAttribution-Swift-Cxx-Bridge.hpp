@@ -9,27 +9,15 @@
 
 // Forward declarations of C++ defined types
 // Forward declaration of `AdServicesAttributionDataResponse` to properly resolve imports.
-namespace margelo::nitro::nitroappleadattribution
-{
-  struct AdServicesAttributionDataResponse;
-}
+namespace margelo::nitro::nitroappleadattribution { struct AdServicesAttributionDataResponse; }
 // Forward declaration of `AppleAdsAttributionData` to properly resolve imports.
-namespace margelo::nitro::nitroappleadattribution
-{
-  struct AppleAdsAttributionData;
-}
+namespace margelo::nitro::nitroappleadattribution { struct AppleAdsAttributionData; }
 // Forward declaration of `HybridNitroAppleAdAttributionSpec` to properly resolve imports.
-namespace margelo::nitro::nitroappleadattribution
-{
-  class HybridNitroAppleAdAttributionSpec;
-}
+namespace margelo::nitro::nitroappleadattribution { class HybridNitroAppleAdAttributionSpec; }
 
 // Forward declarations of Swift defined types
 // Forward declaration of `HybridNitroAppleAdAttributionSpec_cxx` to properly resolve imports.
-namespace NitroAppleAdAttribution
-{
-  class HybridNitroAppleAdAttributionSpec_cxx;
-}
+namespace NitroAppleAdAttribution { class HybridNitroAppleAdAttributionSpec_cxx; }
 
 // Include C++ defined types
 #include "AdServicesAttributionDataResponse.hpp"
@@ -48,105 +36,91 @@ namespace NitroAppleAdAttribution
  * Contains specialized versions of C++ templated types so they can be accessed from Swift,
  * as well as helper functions to interact with those C++ types from Swift.
  */
-namespace margelo::nitro::nitroappleadattribution::bridge::swift
-{
+namespace margelo::nitro::nitroappleadattribution::bridge::swift {
 
   // pragma MARK: std::optional<std::string>
   /**
    * Specialized version of `std::optional<std::string>`.
    */
   using std__optional_std__string_ = std::optional<std::string>;
-  inline std::optional<std::string> create_std__optional_std__string_(const std::string &value)
-  {
+  inline std::optional<std::string> create_std__optional_std__string_(const std::string& value) {
     return std::optional<std::string>(value);
   }
-
+  
   // pragma MARK: std::shared_ptr<Promise<AdServicesAttributionDataResponse>>
   /**
    * Specialized version of `std::shared_ptr<Promise<AdServicesAttributionDataResponse>>`.
    */
   using std__shared_ptr_Promise_AdServicesAttributionDataResponse__ = std::shared_ptr<Promise<AdServicesAttributionDataResponse>>;
-  inline std::shared_ptr<Promise<AdServicesAttributionDataResponse>> create_std__shared_ptr_Promise_AdServicesAttributionDataResponse__()
-  {
+  inline std::shared_ptr<Promise<AdServicesAttributionDataResponse>> create_std__shared_ptr_Promise_AdServicesAttributionDataResponse__() {
     return Promise<AdServicesAttributionDataResponse>::create();
   }
-  inline PromiseHolder<AdServicesAttributionDataResponse> wrap_std__shared_ptr_Promise_AdServicesAttributionDataResponse__(std::shared_ptr<Promise<AdServicesAttributionDataResponse>> promise)
-  {
+  inline PromiseHolder<AdServicesAttributionDataResponse> wrap_std__shared_ptr_Promise_AdServicesAttributionDataResponse__(std::shared_ptr<Promise<AdServicesAttributionDataResponse>> promise) {
     return PromiseHolder<AdServicesAttributionDataResponse>(std::move(promise));
   }
-
+  
   // pragma MARK: std::function<void(const AdServicesAttributionDataResponse& /* result */)>
   /**
    * Specialized version of `std::function<void(const AdServicesAttributionDataResponse&)>`.
    */
-  using Func_void_AdServicesAttributionDataResponse = std::function<void(const AdServicesAttributionDataResponse & /* result */)>;
+  using Func_void_AdServicesAttributionDataResponse = std::function<void(const AdServicesAttributionDataResponse& /* result */)>;
   /**
    * Wrapper class for a `std::function<void(const AdServicesAttributionDataResponse& / * result * /)>`, this can be used from Swift.
    */
-  class Func_void_AdServicesAttributionDataResponse_Wrapper final
-  {
+  class Func_void_AdServicesAttributionDataResponse_Wrapper final {
   public:
-    explicit Func_void_AdServicesAttributionDataResponse_Wrapper(std::function<void(const AdServicesAttributionDataResponse & /* result */)> &&func) : _function(std::make_shared<std::function<void(const AdServicesAttributionDataResponse & /* result */)>>(std::move(func))) {}
-    inline void call(AdServicesAttributionDataResponse result) const
-    {
+    explicit Func_void_AdServicesAttributionDataResponse_Wrapper(std::function<void(const AdServicesAttributionDataResponse& /* result */)>&& func): _function(std::make_shared<std::function<void(const AdServicesAttributionDataResponse& /* result */)>>(std::move(func))) {}
+    inline void call(AdServicesAttributionDataResponse result) const {
       _function->operator()(result);
     }
-
   private:
-    std::shared_ptr<std::function<void(const AdServicesAttributionDataResponse & /* result */)>> _function;
+    std::shared_ptr<std::function<void(const AdServicesAttributionDataResponse& /* result */)>> _function;
   };
-  Func_void_AdServicesAttributionDataResponse create_Func_void_AdServicesAttributionDataResponse(void *_Nonnull swiftClosureWrapper);
-  inline Func_void_AdServicesAttributionDataResponse_Wrapper wrap_Func_void_AdServicesAttributionDataResponse(Func_void_AdServicesAttributionDataResponse value)
-  {
+  Func_void_AdServicesAttributionDataResponse create_Func_void_AdServicesAttributionDataResponse(void* _Nonnull swiftClosureWrapper);
+  inline Func_void_AdServicesAttributionDataResponse_Wrapper wrap_Func_void_AdServicesAttributionDataResponse(Func_void_AdServicesAttributionDataResponse value) {
     return Func_void_AdServicesAttributionDataResponse_Wrapper(std::move(value));
   }
-
+  
   // pragma MARK: std::function<void(const std::exception_ptr& /* error */)>
   /**
    * Specialized version of `std::function<void(const std::exception_ptr&)>`.
    */
-  using Func_void_std__exception_ptr = std::function<void(const std::exception_ptr & /* error */)>;
+  using Func_void_std__exception_ptr = std::function<void(const std::exception_ptr& /* error */)>;
   /**
    * Wrapper class for a `std::function<void(const std::exception_ptr& / * error * /)>`, this can be used from Swift.
    */
-  class Func_void_std__exception_ptr_Wrapper final
-  {
+  class Func_void_std__exception_ptr_Wrapper final {
   public:
-    explicit Func_void_std__exception_ptr_Wrapper(std::function<void(const std::exception_ptr & /* error */)> &&func) : _function(std::make_shared<std::function<void(const std::exception_ptr & /* error */)>>(std::move(func))) {}
-    inline void call(std::exception_ptr error) const
-    {
+    explicit Func_void_std__exception_ptr_Wrapper(std::function<void(const std::exception_ptr& /* error */)>&& func): _function(std::make_shared<std::function<void(const std::exception_ptr& /* error */)>>(std::move(func))) {}
+    inline void call(std::exception_ptr error) const {
       _function->operator()(error);
     }
-
   private:
-    std::shared_ptr<std::function<void(const std::exception_ptr & /* error */)>> _function;
+    std::shared_ptr<std::function<void(const std::exception_ptr& /* error */)>> _function;
   };
-  Func_void_std__exception_ptr create_Func_void_std__exception_ptr(void *_Nonnull swiftClosureWrapper);
-  inline Func_void_std__exception_ptr_Wrapper wrap_Func_void_std__exception_ptr(Func_void_std__exception_ptr value)
-  {
+  Func_void_std__exception_ptr create_Func_void_std__exception_ptr(void* _Nonnull swiftClosureWrapper);
+  inline Func_void_std__exception_ptr_Wrapper wrap_Func_void_std__exception_ptr(Func_void_std__exception_ptr value) {
     return Func_void_std__exception_ptr_Wrapper(std::move(value));
   }
-
+  
   // pragma MARK: std::shared_ptr<margelo::nitro::nitroappleadattribution::HybridNitroAppleAdAttributionSpec>
   /**
    * Specialized version of `std::shared_ptr<margelo::nitro::nitroappleadattribution::HybridNitroAppleAdAttributionSpec>`.
    */
-  using std__shared_ptr_margelo__nitro__nitroappleads__HybridNitroAppleAdAttributionSpec_ = std::shared_ptr<margelo::nitro::nitroappleadattribution::HybridNitroAppleAdAttributionSpec>;
-  std::shared_ptr<margelo::nitro::nitroappleadattribution::HybridNitroAppleAdAttributionSpec> create_std__shared_ptr_margelo__nitro__nitroappleads__HybridNitroAppleAdAttributionSpec_(void *_Nonnull swiftUnsafePointer);
-  void *_Nonnull get_std__shared_ptr_margelo__nitro__nitroappleads__HybridNitroAppleAdAttributionSpec_(std__shared_ptr_margelo__nitro__nitroappleads__HybridNitroAppleAdAttributionSpec_ cppType);
-
+  using std__shared_ptr_margelo__nitro__nitroappleadattribution__HybridNitroAppleAdAttributionSpec_ = std::shared_ptr<margelo::nitro::nitroappleadattribution::HybridNitroAppleAdAttributionSpec>;
+  std::shared_ptr<margelo::nitro::nitroappleadattribution::HybridNitroAppleAdAttributionSpec> create_std__shared_ptr_margelo__nitro__nitroappleadattribution__HybridNitroAppleAdAttributionSpec_(void* _Nonnull swiftUnsafePointer);
+  void* _Nonnull get_std__shared_ptr_margelo__nitro__nitroappleadattribution__HybridNitroAppleAdAttributionSpec_(std__shared_ptr_margelo__nitro__nitroappleadattribution__HybridNitroAppleAdAttributionSpec_ cppType);
+  
   // pragma MARK: std::weak_ptr<margelo::nitro::nitroappleadattribution::HybridNitroAppleAdAttributionSpec>
-  using std__weak_ptr_margelo__nitro__nitroappleads__HybridNitroAppleAdAttributionSpec_ = std::weak_ptr<margelo::nitro::nitroappleadattribution::HybridNitroAppleAdAttributionSpec>;
-  inline std__weak_ptr_margelo__nitro__nitroappleads__HybridNitroAppleAdAttributionSpec_ weakify_std__shared_ptr_margelo__nitro__nitroappleads__HybridNitroAppleAdAttributionSpec_(const std::shared_ptr<margelo::nitro::nitroappleadattribution::HybridNitroAppleAdAttributionSpec> &strong) { return strong; }
-
+  using std__weak_ptr_margelo__nitro__nitroappleadattribution__HybridNitroAppleAdAttributionSpec_ = std::weak_ptr<margelo::nitro::nitroappleadattribution::HybridNitroAppleAdAttributionSpec>;
+  inline std__weak_ptr_margelo__nitro__nitroappleadattribution__HybridNitroAppleAdAttributionSpec_ weakify_std__shared_ptr_margelo__nitro__nitroappleadattribution__HybridNitroAppleAdAttributionSpec_(const std::shared_ptr<margelo::nitro::nitroappleadattribution::HybridNitroAppleAdAttributionSpec>& strong) { return strong; }
+  
   // pragma MARK: Result<std::shared_ptr<Promise<AdServicesAttributionDataResponse>>>
   using Result_std__shared_ptr_Promise_AdServicesAttributionDataResponse___ = Result<std::shared_ptr<Promise<AdServicesAttributionDataResponse>>>;
-  inline Result_std__shared_ptr_Promise_AdServicesAttributionDataResponse___ create_Result_std__shared_ptr_Promise_AdServicesAttributionDataResponse___(const std::shared_ptr<Promise<AdServicesAttributionDataResponse>> &value)
-  {
+  inline Result_std__shared_ptr_Promise_AdServicesAttributionDataResponse___ create_Result_std__shared_ptr_Promise_AdServicesAttributionDataResponse___(const std::shared_ptr<Promise<AdServicesAttributionDataResponse>>& value) {
     return Result<std::shared_ptr<Promise<AdServicesAttributionDataResponse>>>::withValue(value);
   }
-  inline Result_std__shared_ptr_Promise_AdServicesAttributionDataResponse___ create_Result_std__shared_ptr_Promise_AdServicesAttributionDataResponse___(const std::exception_ptr &error)
-  {
+  inline Result_std__shared_ptr_Promise_AdServicesAttributionDataResponse___ create_Result_std__shared_ptr_Promise_AdServicesAttributionDataResponse___(const std::exception_ptr& error) {
     return Result<std::shared_ptr<Promise<AdServicesAttributionDataResponse>>>::withError(error);
   }
 
