@@ -1,6 +1,6 @@
 {
-  "name": "@vineyardbovines/nitro-apple-ad-attribution",
-  "version": "0.0.2",
+  "name": "react-native-nitro-apple-ad-attribution",
+  "version": "0.0.3",
   "description": "Nitro module for Apple AdServices Attribution API",
   "main": "lib/index",
   "module": "lib/index",
@@ -40,7 +40,7 @@
     "type": "git",
     "url": "git+https://github.com/vineyardbovines/react-native-nitro-apple-ad-attribution.git"
   },
-  "author": "Spence Pope <spencer@begaydocrime.tech> (https://github.com/vineyardbovines)",
+  "author": "Spence Pope <spencer@begaydocrime.tech>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/vineyardbovines/react-native-nitro-apple-ad-attribution/issues"
